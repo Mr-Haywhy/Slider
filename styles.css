@@ -61,8 +61,7 @@ img {
   justify-content: space-between;
   width: 100%;
   opacity: 1;
-  color: #fff;
-  /* color: transparent; */
+  color: transparent;
 }
 
 .controls :hover {
