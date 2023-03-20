@@ -35,16 +35,20 @@ const slides = document.querySelector(".slides");
 const carousel = document.querySelector(".carousel");
 const prevBtn = document.querySelector(".prevBtn");
 const nextBtn = document.querySelector(".nextBtn");
-const page = { sildeList: [], dots: [], counter: 0 };
+const page = { auto: {}, sildeList: [], dots: [], counter: 0 };
+prevBtn.classList.add("sel");
+nextBtn.classList.add("sel");
 
 prevBtn.addEventListener("click", (e) => {
   page.counter--;
   showImages();
+  restartInt();
 });
 
 nextBtn.addEventListener("click", (e) => {
   page.counter++;
   showImages();
+  restartInt();
 });
 
 window.addEventListener("DOMContentLoaded", showImages);
@@ -70,4 +74,4 @@ myImages.forEach((img, index) => {
   <p>${img.subText}</p>`;
   page.sildeList.push(conCard);
   slides.append(conCard);
-});
+}); 
